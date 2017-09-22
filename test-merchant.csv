@@ -1,0 +1,15 @@
+name,myorder,myname,token,content-type,myurl,mymethod,mydata,myresult
+商家版本登录密码错误,1,sybapitest.dd528.com,,application/json,/mini/business/login,post,"{""phe"":""15839901534"",""password"":""12345678""}","{""message"":""账户和密码不匹配"","
+商家版获取店铺名称,2,sybapitest.dd528.com,,application/json,/mini/business/api/store/name,post,,
+商家版新增活动,3,sybapitest.dd528.com,,application/json,/mini/business/store/activity,post,"{""start_time"":""2017-11-07"",""name"":""活动003"",""end_time"":""2017-12-07"",""full_cut"":[{""full"":10,""cut"":1}],""type"":""FULL_CUT""}","{""message"":""success"",""statusCode"":""200"""
+商家版获取商品分类,4,sybapitest.dd528.com,,application/json,/mini/business/api/store/catalogs,post,,"{""message"":""success"",""statusCode"":""200"""
+商家版获取分类下商品,5,sybapitest.dd528.com,,application/json,/mini/business/api/goods/list?func=get&?,post,"{""cid"":""d72a1744ab524e879b10f457f9249c2d"",""limit"":10,""offset"":0,""img"":-1}","{""message"":""查询成功"",""statusCode"":""200"""
+商家版分类下有图商品,6,sybapitest.dd528.com,,application/json,/mini/business/api/goods/list?func=get&?,post,"{""cid"":""AVxiFtMSXFRwWAdHh6Jq"",""limit"":10,""offset"":0,""img"":1}","{""message"":""查询成功"",""statusCode"":""200"""
+商家版分类下无图商品,7,sybapitest.dd528.com,,application/json,/mini/business/api/goods/list?func=get&?,post,"{""cid"":""AVxiFtMSXFRwWAdHh6Jq"",""limit"":10,""offset"":0,""img"":0}","{""message"":""查询成功"",""statusCode"":""200"""
+商家版商品查询,8,sybapitest.dd528.com,,application/json,/mini/business/api/goods/search,post,"{""keyword"":""可口"",""offset"":0,""limit"":100}","{""message"":""查询成功"",""statusCode"":""200"""
+商家版获取店铺二维码,9,sybapitest.dd528.com,,application/json,/mini/business/getCodeImgUrl,post,,"{""message"":""success"",""statusCode"":""200"","
+获取店铺活动,10,sybapitest.dd528.com,,,/mini/business/store/activity?limit=5&offset=0&status=%5B%22PROMOTION_READY%22%2C%22PROMOTION_PAUSE%22%2C%22PROMOTION_ON%22%2C%22PROMOTION_OFF%22%5D,get,,"{""message"":""success"",""statusCode"":""200"""
+获取进行中活动,11,sybapitest.dd528.com,,,/mini/business/store/activity?limit=5&offset=0&status=%5B%22PROMOTION_ON%22%5D,get,,"{""message"":""success"",""statusCode"":""200"
+获取未开始活动,12,sybapitest.dd528.com,,,/mini/business/store/activity?limit=5&offset=0&status=%5B%22PROMOTION_READY%22%5D,get,,"{""message"":""success"",""statusCode"":""200"
+获取已结束活动,13,sybapitest.dd528.com,,,/mini/business/store/activity?limit=5&offset=0&status=%5B%22PROMOTION_PAUSE%22%2C%22PROMOTION_OFF%22%5D,get,,"{""message"":""success"",""statusCode"":""200"
+获取活动详情,14,sybapitest.dd528.com,,,/mini/business/store/activity/detail?activity_id=142,get,,"{""message"":""success"",""statusCode"":""200"
