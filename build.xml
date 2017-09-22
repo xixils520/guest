@@ -12,7 +12,7 @@
     <property name="jmeter.result.html.dir" value="/usr/local/soft/jb" />
     <!-- 生成的报告的前缀-->  
     <property name="ReportName" value="TestReport" />
-    <property name="jmeter.result.jtlName" value="${jmeter.result.jtl.dir}/${ReportName}${time}.jtl" />
+    <property name="jmeter.result.jtlName" value="${jmeter.result.jtl.dir}/${time}.jtl" />
     <property name="jmeter.result.htmlName" value="${jmeter.result.html.dir}/${ReportName}.html" />
     
     <path id="xslt.classpath">
