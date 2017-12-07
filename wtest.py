@@ -7,16 +7,16 @@ from multiprocessing import Process
 # f.close()
 # print(os.getcwd())
 # print('213123s%s' % (time.time()))
-def run_proc(name):
-    print('第一条线程 %s (%s)...' % (name, os.getpid()))
-if __name__=='__main__':
-    print('父 %s' % (os.getpid()))
-    for i in range(5):
-        p=Process(target=run_proc,args=(str(i),))
-        print('Process will start')
-        p.start()
-    p.join()
-    print('Process end')
+# def run_proc(name):
+#     print('第一条线程 %s (%s)...' % (name, os.getpid()))
+# if __name__=='__main__':
+#     print('父 %s' % (os.getpid()))
+#     for i in range(5):
+#         p=Process(target=run_proc,args=(str(i),))
+#         print('Process will start')
+#         p.start()
+#     p.join()
+#     print('Process end')
 
 # from multiprocessing import Process
 # import os
@@ -36,3 +36,6 @@ if __name__=='__main__':
 #     # 等待子进程结束后再继续往下运行
 #     p.join()
 #     print('Child process end.')
+from datetime import  datetime
+print (datetime.now())
+print (datetime.datetime.now())
