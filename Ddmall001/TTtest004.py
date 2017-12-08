@@ -52,12 +52,14 @@ class mzitu():
     def all_url(self,url):
         html=request.get(url,3)
         all_a=BeautifulSoup(html.text,'lxml').find('div',class_='all').find_all('a')
+        print(all_a)
         for a in all_a:
             title = a.get_text()
             self.title=title
             print(u'开始保存：',title)
             path = str(title).strip()
             path = re.search('\w+', path).group()
+            print(path)
             self.mkdir(path)
             # os.makedirs('C:/soft/picture/' + path)
 
