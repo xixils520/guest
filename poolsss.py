@@ -25,21 +25,60 @@ for a in url:
         os.chdir('C:/soft/picture/' + path)
         for page in range(1, len(url) + 1):
             page_url='http://www.tooopen.com'+href
-            print(page_url)
+            # print(page_url)
             img_html=requests.get(page_url)
             img_Soup=BeautifulSoup(img_html.text,'lxml')
             img_url=img_Soup.find_all('a',attrs={'target':"_blank",'href':True,'class':'pic'})
             # print(img_url)
             for i in img_url:
-                print(i)
-                print(i.img['src'])
-                # name = img_url[-9:-4]
-                img=i.img['src']
-                name=img[-8:-4]
-                img=requests.get(img)
-                f=open('C:/soft/picture/'+path+'/'+name+'.jpg','wb')
+                # print(i)
+                # print(i.attrs.keys())
+                href=i['href']
+                print(href)
+                img = requests.get(href)
+                img_Soup=BeautifulSoup(img.text,'lxml').find('div',class_='hindendiv').find('a',attrs={'data-img':True})
+                # print(img_Soup)
+                # print(img_Soup.attrs.keys())
+                img=img_Soup['data-img']
+                print(img)
+                # print('1111111111')
+                name = img[-8:-4]
+                img = requests.get(img)
+                # print('22222222222')
+
+                f = open('C:/soft/picture/' + path + '/' + name + '.jpg', 'wb')
+                # print('3333333')
                 f.write(img.content)
+                # print('44444444')
                 f.close()
+
+
+
+
+                # if 'scr' in i.img.attrs.keys():
+                #
+                #     img=i.img['src']
+                #     print('11111111111')
+                #     print(img)
+                #     name = img[-8:-4]
+                #     img = requests.get(img)
+                #     f = open('C:/soft/picture/' + path + '/' + name + '.jpg', 'wb')
+                #     f.write(img.content)
+                #     f.close()
+                # elif 'data-src' in i.img.attrs.keys():
+                #     img = i.img['data-src']
+                #     print('2222222')
+                #     print(img)
+                #     name = img[-8:-4]
+                #     img = requests.get(img)
+                #     f = open('C:/soft/picture/' + path + '/' + name + '.jpg', 'wb')
+                #     f.write(img.content)
+                #     f.close()
+                #
+                # else:
+                #     img=''
+
+
 
 
 

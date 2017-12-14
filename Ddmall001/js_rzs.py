@@ -6,8 +6,8 @@ from selenium import webdriver
 # 添加提交补仓单
 driver=webdriver.Firefox()
 driver.get("http://192.168.1.251:9527/login")
-driver.find_element_by_xpath(".//*[@id='uid']").send_keys("15090658127")
-driver.find_element_by_xpath(".//*[@id='pwd']").send_keys("658127")
+driver.find_element_by_xpath(".//*[@id='uid']").send_keys("15633333333")
+driver.find_element_by_xpath(".//*[@id='pwd']").send_keys("333333")
 time.sleep(1)
 driver.find_element_by_xpath(".//*[@id='login_submit_button']").click()
 driver.find_element_by_xpath(".//*[@id='app_sidebar']/ul/li[4]/a").click()
