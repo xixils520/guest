@@ -7,16 +7,16 @@ from Ddmall001.TTtest008 import Download
 from Ddmall001.TTtest008 import request
 from pymongo import MongoClient
 from datetime import datetime
-headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36','Referer':'http://www.mzitu.com/99566'}
-all_url='http://www.mzitu.com/all/'
-start_html=requests.get(all_url,headers=headers)
+# headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36','Referer':'http://www.mzitu.com/99566'}
+# all_url='http://www.mzitu.com/all/'
+# start_html=requests.get(all_url,headers=headers)
 # print(start_html.text)
-Soup=BeautifulSoup(start_html.text,'lxml')
+# Soup=BeautifulSoup(start_html.text,'lxml')
 # li_list=Soup.find_all('li')
 # li_list=Soup.find('div',class_='all').find_all('a')
 # for li in li_list:
 #     print(li)
-all_a=Soup.find('div',class_='all').find_all('a')
+# all_a=Soup.find('div',class_='all').find_all('a')
 # for a in all_a:
 #     title=a.get_text()
 #     path=str(title).strip()
@@ -120,4 +120,4 @@ class mzitu():
             return False
 
 Mzitu=mzitu()
-Mzitu.all_url('http://www.mzitu.com/all')
+Mzitu.all_url('http://www.mzitu.com/old')
